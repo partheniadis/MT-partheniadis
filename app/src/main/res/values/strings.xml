@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">MT-v01</string>
+    <string name="apostoles">Αποστολές</string>
+    <string name="chartis">Χάρτης</string>
+    <string name="ergaleiothiki">Εργαλειοθήκη</string>
+    <string name="rithmiseis">Ρυθμίσεις</string>
+</resources>

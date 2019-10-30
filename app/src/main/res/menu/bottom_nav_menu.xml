@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/null_item"
+        android:title=" "
+        android:enabled="false"/>
+
+    <item
+        android:id="@+id/apostoles"
+        android:icon="@drawable/ic_flag_black_24dp"
+        android:title="@string/apostoles"
+        />
+
+    <item
+        android:id="@+id/chartis"
+        android:icon="@drawable/ic_map_black_24dp"
+        android:title="@string/chartis" />
+
+    <item
+        android:id="@+id/ergaleiothiki"
+        android:icon="@drawable/ic_tool_24dp"
+        android:title="@string/ergaleiothiki" />
+
+    <item
+        android:id="@+id/rithmiseis"
+        android:icon="@drawable/ic_settings_black_24dp"
+        android:title="@string/rithmiseis" />
+
+</menu>

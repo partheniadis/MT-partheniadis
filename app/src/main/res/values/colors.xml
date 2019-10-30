@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorNeutral">#818181</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="white">#FFFFFF</color>
+    <color name="background">#F5F5F5</color>
+    <color name="transparent">#00FFFFFF</color>
+    <color name="colorApostoles">#6CBF8D</color>
+    <color name="colorChartis">#E5575C</color>
+    <color name="colorErgaliothiki">#28897A</color>
+    <color name="colorRithmisis">#333333</color>
+</resources>
