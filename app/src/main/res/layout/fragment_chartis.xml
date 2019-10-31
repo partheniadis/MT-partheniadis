@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     >
 
-    <TextView
+    <com.example.mt_v01.CustomTextView
         android:id="@+id/title_chartes"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

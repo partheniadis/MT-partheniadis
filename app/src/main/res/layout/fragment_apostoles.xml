@@ -8,7 +8,7 @@
     android:orientation="vertical"
 >
 
-    <TextView
+    <com.example.mt_v01.CustomTextView
         android:id="@+id/title_apostoles"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

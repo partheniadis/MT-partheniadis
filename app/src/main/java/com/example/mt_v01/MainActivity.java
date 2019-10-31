@@ -1,23 +1,13 @@
 package com.example.mt_v01;
 
-import android.Manifest;
-import android.content.Context;
-import android.content.pm.PackageManager;
 import android.os.Bundle;
-
 import com.akexorcist.roundcornerprogressbar.RoundCornerProgressBar;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
-
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.annotation.NonNull;
-import androidx.core.app.ActivityCompat;
-import androidx.core.content.ContextCompat;
-import androidx.fragment.app.Fragment;
-
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
-
 
 public class MainActivity extends AppCompatActivity {
 
@@ -29,6 +19,7 @@ public class MainActivity extends AppCompatActivity {
     FragmentChartis fragmentChartis = new FragmentChartis();
     FragmentErgaliothiki fragmentErgaliothiki = new FragmentErgaliothiki();
     FragmentRithmisis fragmentRithmisis = new FragmentRithmisis();
+
 
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
             = new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -64,10 +55,12 @@ public class MainActivity extends AppCompatActivity {
         }
     };
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_coord);
+
         progressTwo = (RoundCornerProgressBar) findViewById(R.id.progress_two);
         progressTwo.setProgressColor(getResources().getColor(R.color.color_progress));
         //        updateProgressTwoColor();
@@ -110,4 +103,7 @@ public class MainActivity extends AppCompatActivity {
         updateProgressTwoColor();
     }
 
+    public void goBack(View view) {
+        finish();
+    }
 }
