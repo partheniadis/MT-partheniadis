@@ -5,6 +5,7 @@ import android.content.Context;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
 
+import com.akexorcist.roundcornerprogressbar.RoundCornerProgressBar;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -23,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
     private NoSwipePager viewPager;
     private BottomBarAdapter pagerAdapter;
     private BottomNavigationView navView;
+    private RoundCornerProgressBar progressTwo;
     FragmentApostoles fragmentApostoles = new FragmentApostoles();
     FragmentChartis fragmentChartis = new FragmentChartis();
     FragmentErgaliothiki fragmentErgaliothiki = new FragmentErgaliothiki();
@@ -66,6 +68,10 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_coord);
+        progressTwo = (RoundCornerProgressBar) findViewById(R.id.progress_two);
+        progressTwo.setProgressColor(getResources().getColor(R.color.color_progress));
+        //        updateProgressTwoColor();
+
         viewPager = findViewById(R.id.viewPager);
         navView = findViewById(R.id.bottom_navigation);
         navView.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
@@ -82,12 +88,26 @@ public class MainActivity extends AppCompatActivity {
         pagerAdapter.addFragments(fragmentRithmisis);
         viewPager.setAdapter(pagerAdapter);
 
-
     }
 
     public void toast(View view) {
         Toast.makeText(getApplicationContext(),"Γειά μαστοράκο...", Toast.LENGTH_SHORT).show();
     }
 
+    private void updateProgressTwoColor() {
+        float progress = progressTwo.getProgress();
+        if(progress <= 30) {
+            progressTwo.setProgressColor(getResources().getColor(R.color.custom_progress_red_progress));
+        } else if(progress > 30 && progress <= 60) {
+            progressTwo.setProgressColor(getResources().getColor(R.color.custom_progress_orange_progress));
+        } else if(progress > 60) {
+            progressTwo.setProgressColor(getResources().getColor(R.color.custom_progress_green_progress));
+        }
+    }
+
+    private void increaseProgressTwo() {
+        progressTwo.setProgress(progressTwo.getProgress() + 1);
+        updateProgressTwoColor();
+    }
 
 }

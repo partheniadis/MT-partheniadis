@@ -63,6 +63,7 @@ public class FragmentChartis extends Fragment {
         //make map
         map = view.findViewById(R.id.map_view);
         // Create a custom tile source
+
         /*final ITileSource tileSource = new XYTileSource( "Humanitarian", 1, 20, 256, ".png",
                 new String[] {
                         "http://a.tile.openstreetmap.fr/",
@@ -79,8 +80,9 @@ public class FragmentChartis extends Fragment {
                         + mImageFilenameEnding;
             }
         });*/
+
         map.setTileSource(TileSourceFactory.MAPNIK);
-//        map.setTileSource(new XYTileSource("Humanitarian", 16, 19, 256, ".png", new String[] {}));
+
         //created tiles with Maperitive, and placed them in Assets folder in "OSM" folder name
         //give start point to the map and add some functionality to it
         //handle permissions first, to show user location (shown in callback onRequestPermissionsResult)
@@ -190,7 +192,7 @@ public class FragmentChartis extends Fragment {
         gpsMyLocationProvider.setLocationUpdateMinTime(10000);   // [ms] // Set the minimum time interval for location updates
         MyLocationNewOverlay mLocationOverlay = new MyLocationNewOverlay(gpsMyLocationProvider, map);
         mLocationOverlay.enableMyLocation();
-        mLocationOverlay.enableFollowLocation();
+//        mLocationOverlay.enableFollowLocation();
         map.getOverlays().add(mLocationOverlay);
 
     }
