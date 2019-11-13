@@ -2,6 +2,12 @@ package com.example.mt_v01;
 
 import android.os.Bundle;
 import com.akexorcist.roundcornerprogressbar.RoundCornerProgressBar;
+import com.example.mt_v01.fragments.FragmentApostoles;
+import com.example.mt_v01.fragments.FragmentChartis;
+import com.example.mt_v01.fragments.FragmentErgaliothiki;
+import com.example.mt_v01.fragments.FragmentRithmisis;
+import com.example.mt_v01.helperclasses.BottomBarAdapter;
+import com.example.mt_v01.helperclasses.NoSwipePager;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.annotation.NonNull;
@@ -62,7 +68,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main_coord);
 
         progressTwo = (RoundCornerProgressBar) findViewById(R.id.progress_two);
-        progressTwo.setProgressColor(getResources().getColor(R.color.color_progress));
+        progressTwo.setProgressColor(getResources().getColor(R.color.mt_tinos));
         //        updateProgressTwoColor();
 
         viewPager = findViewById(R.id.viewPager);

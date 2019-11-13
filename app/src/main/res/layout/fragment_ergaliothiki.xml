@@ -15,7 +15,7 @@
             android:paddingRight="22dp"
             >
 
-            <com.example.mt_v01.CustomTextView
+<!--            <com.example.mt_v01.helperclasses.CustomTextView
                 android:id="@+id/textView2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -31,7 +31,7 @@
             <View
                 android:layout_width="match_parent"
                 android:layout_height="22dp"
-                 />
+                 />-->
 
             <ImageView
                 android:id="@+id/imageView2"
@@ -68,7 +68,8 @@
                                 android:layout_height="match_parent"
                                 >
 
-                                <com.example.mt_v01.CustomTextView android:gravity="left"
+                                <com.example.mt_v01.helperclasses.CustomTextView
+                                    android:gravity="left"
                                     android:text="Εργαλεία"/>
 
                             </TableRow>

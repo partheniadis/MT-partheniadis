@@ -32,7 +32,7 @@ limitations under the License.
         android:paddingBottom="30dp"
         android:paddingTop="30dp">
 
-        <com.example.mt_v01.CustomTextView
+        <com.example.mt_v01.helperclasses.CustomTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/round_corner_progress_bar"
@@ -58,7 +58,7 @@ limitations under the License.
                 app:rcProgressColor="@color/custom_progress_orange_progress"
                 app:rcRadius="0dp" />
 
-            <com.example.mt_v01.CustomTextView
+            <com.example.mt_v01.helperclasses.CustomTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:lineSpacingExtra="4dp"
@@ -91,7 +91,7 @@ limitations under the License.
                 app:rcSecondaryProgress="60"
                 app:rcSecondaryProgressColor="@color/custom_progress_green_progress_half" />
 
-            <com.example.mt_v01.CustomTextView
+            <com.example.mt_v01.helperclasses.CustomTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:lineSpacingExtra="4dp"
@@ -125,7 +125,7 @@ limitations under the License.
                 app:rcSecondaryProgress="60"
                 app:rcSecondaryProgressColor="@color/custom_progress_red_progress_half" />
 
-            <com.example.mt_v01.CustomTextView
+            <com.example.mt_v01.helperclasses.CustomTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:lineSpacingExtra="4dp"
@@ -158,7 +158,7 @@ limitations under the License.
                 app:rcProgressColor="@color/custom_progress_blue_progress"
                 app:rcRadius="20dp" />
 
-            <com.example.mt_v01.CustomTextView
+            <com.example.mt_v01.helperclasses.CustomTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:lineSpacingExtra="4dp"
@@ -191,7 +191,7 @@ limitations under the License.
                 app:rcProgressColor="@color/custom_progress_green_progress"
                 app:rcRadius="5dp" />
 
-            <com.example.mt_v01.CustomTextView
+            <com.example.mt_v01.helperclasses.CustomTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:lineSpacingExtra="4dp"
@@ -224,7 +224,7 @@ limitations under the License.
                 app:rcProgressColor="@color/custom_progress_red_progress"
                 app:rcRadius="10dp" />
 
-            <com.example.mt_v01.CustomTextView
+            <com.example.mt_v01.helperclasses.CustomTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:lineSpacingExtra="4dp"
@@ -257,7 +257,7 @@ limitations under the License.
                 app:rcProgressColor="@color/custom_progress_purple_progress"
                 app:rcRadius="30dp" />
 
-            <com.example.mt_v01.CustomTextView
+            <com.example.mt_v01.helperclasses.CustomTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:lineSpacingExtra="4dp"
@@ -269,7 +269,7 @@ limitations under the License.
 
         </LinearLayout>
 
-        <com.example.mt_v01.CustomTextView
+        <com.example.mt_v01.helperclasses.CustomTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
@@ -302,7 +302,7 @@ limitations under the License.
                 app:rcProgressColor="@color/custom_progress_red_progress"
                 app:rcRadius="5dp" />
 
-            <com.example.mt_v01.CustomTextView
+            <com.example.mt_v01.helperclasses.CustomTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:lineSpacingExtra="4dp"
@@ -340,7 +340,7 @@ limitations under the License.
                 app:rcRadius="5dp"
                 app:rcReverse="true" />
 
-            <com.example.mt_v01.CustomTextView
+            <com.example.mt_v01.helperclasses.CustomTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:lineSpacingExtra="4dp"
@@ -379,7 +379,7 @@ limitations under the License.
                 app:rcSecondaryProgress="80"
                 app:rcSecondaryProgressColor="@color/custom_progress_orange_progress_half" />
 
-            <com.example.mt_v01.CustomTextView
+            <com.example.mt_v01.helperclasses.CustomTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:lineSpacingExtra="4dp"
@@ -417,7 +417,7 @@ limitations under the License.
                 app:rcProgressColor="@color/custom_progress_blue_progress"
                 app:rcRadius="5dp" />
 
-            <com.example.mt_v01.CustomTextView
+            <com.example.mt_v01.helperclasses.CustomTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:lineSpacingExtra="4dp"
@@ -454,7 +454,7 @@ limitations under the License.
                 app:rcProgressColor="@color/custom_progress_green_progress"
                 app:rcRadius="5dp" />
 
-            <com.example.mt_v01.CustomTextView
+            <com.example.mt_v01.helperclasses.CustomTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:lineSpacingExtra="4dp"
@@ -491,7 +491,7 @@ limitations under the License.
                 app:rcProgressColor="@color/custom_progress_purple_progress"
                 app:rcRadius="0dp" />
 
-            <com.example.mt_v01.CustomTextView
+            <com.example.mt_v01.helperclasses.CustomTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:lineSpacingExtra="4dp"
@@ -529,7 +529,7 @@ limitations under the License.
                 app:rcProgressColor="@color/custom_progress_orange_progress"
                 app:rcRadius="30dp" />
 
-            <com.example.mt_v01.CustomTextView
+            <com.example.mt_v01.helperclasses.CustomTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:lineSpacingExtra="4dp"
@@ -541,7 +541,7 @@ limitations under the License.
 
         </LinearLayout>
 
-        <com.example.mt_v01.CustomTextView
+        <com.example.mt_v01.helperclasses.CustomTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
@@ -576,7 +576,7 @@ limitations under the License.
                 app:rcTextProgressMargin="10dp"
                 app:rcTextProgressSize="14sp" />
 
-            <com.example.mt_v01.CustomTextView
+            <com.example.mt_v01.helperclasses.CustomTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:lineSpacingExtra="4dp"
@@ -613,7 +613,7 @@ limitations under the License.
                 app:rcTextProgressMargin="10dp"
                 app:rcTextProgressSize="12sp" />
 
-            <com.example.mt_v01.CustomTextView
+            <com.example.mt_v01.helperclasses.CustomTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:lineSpacingExtra="4dp"
@@ -651,7 +651,7 @@ limitations under the License.
                 app:rcTextProgressMargin="5dp"
                 app:rcTextProgressSize="20sp" />
 
-            <com.example.mt_v01.CustomTextView
+            <com.example.mt_v01.helperclasses.CustomTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:lineSpacingExtra="4dp"
@@ -663,7 +663,7 @@ limitations under the License.
 
         </LinearLayout>
 
-        <com.example.mt_v01.CustomTextView
+        <com.example.mt_v01.helperclasses.CustomTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
@@ -703,7 +703,7 @@ limitations under the License.
                     android:textColor="@color/text"
                     android:textSize="18sp" />
 
-                <com.example.mt_v01.CustomTextView
+                <com.example.mt_v01.helperclasses.CustomTextView
                     android:id="@+id/tv_progress_one"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
@@ -757,7 +757,7 @@ limitations under the License.
                     android:textColor="@color/text"
                     android:textSize="18sp" />
 
-                <com.example.mt_v01.CustomTextView
+                <com.example.mt_v01.helperclasses.CustomTextView
                     android:id="@+id/tv_progress_two"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
