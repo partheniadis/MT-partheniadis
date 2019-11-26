@@ -1,4 +1,5 @@
 package com.example.mt_v01.fragments;
+
 import android.Manifest;
 import android.app.Activity;
 import android.content.Context;
@@ -12,7 +13,6 @@ import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 import androidx.viewpager.widget.ViewPager;
 
-
 import android.preference.PreferenceManager;
 import android.util.DisplayMetrics;
 import android.util.TypedValue;
@@ -24,6 +24,7 @@ import com.example.mt_v01.R;
 import com.example.mt_v01.cardviewpager.CardViewPagerAdapter;
 import com.example.mt_v01.cardviewpager.animators.AlphaTransformer;
 import com.example.mt_v01.cardviewpager.animators.ScaleTransformer;
+import com.example.mt_v01.helperclasses.Challenge;
 
 import org.osmdroid.api.IMapController;
 import org.osmdroid.config.Configuration;
@@ -50,6 +51,9 @@ public class FragmentChartis extends Fragment {
     private static final int LOCATION_PERMISSION_REQUEST_CODE = 1;
     Context ctx;
     private View view;
+    private List<Challenge> challenges_list = new ArrayList<>();
+    private CardViewPagerAdapter cardViewPagerAdapter;
+    private ViewPager viewPager;
 
     @Nullable
     @Override
@@ -57,24 +61,87 @@ public class FragmentChartis extends Fragment {
         view =  inflater.inflate(R.layout.fragment_chartis, container,false );
         ctx = view.getContext();
 
+        //challenges
+
+
         //Create the challenges card view pager
         Configuration.getInstance().load(ctx, PreferenceManager.getDefaultSharedPreferences(ctx));
-        ViewPager viewPager = (ViewPager) view.findViewById(R.id.cardView);
+        viewPager = (ViewPager) view.findViewById(R.id.cardView);
         viewPager.setPageMargin(20);
         viewPager.setOffscreenPageLimit(3);
-        List<Integer> list = new ArrayList<>();
-        list.add(1);//TODO: instead of a number, add the appropriate amount of challenge object/id.
-        list.add(2);
-        list.add(3);
-        list.add(4);
-        list.add(5);
-        CardViewPagerAdapter cardViewPagerAdapter = new CardViewPagerAdapter(ctx, list);
+        //TODO: instead of my class, use the proper challenge class from Panagiotis.
+        //VRYSI
+        challenges_list.add(new Challenge(R.drawable.ch_marmarenia_vrisi, "Ψάξτε τις επιγραφές της κρήνης. Ποια η χρονολογία της 1ης, 2ης, και 3ης φάσης κατασκευής της;",getResources().getString(R.string.challenge_simplirwsis),getResources().getString(R.string.area_plateia_xwriou),5,
+                37.639168, 25.042064));
+        challenges_list.add(new Challenge(R.drawable.ch_marmarenia_vrisi_fiali, "Ποια είναι η χρονολογία της κατασκευής της φιάλης, η οποία αναγράφεται με ελληνικούς αριθμούς;",getResources().getString(R.string.challenge_simplirwsis),getResources().getString(R.string.area_plateia_xwriou),5,
+                37.639223, 25.042090));
+        challenges_list.add(new Challenge(R.drawable.ch_marmarenia_vrisi, "Ποιο γεγονός μαρτυρεί η επιγραφή στη μεσαία κολόνα της πρόσοψης;",getResources().getString(R.string.challenge_multiple_choice_text),getResources().getString(R.string.area_plateia_xwriou),5,
+                37.639201, 25.042070));
+        challenges_list.add(new Challenge(R.drawable.ch_plistres, "Αναζητήστε λίγο μακρύτερα (στο δρόμο αριστερά) τις «πλύστρες» του χωριού, όπου οι γυναίκες έκαναν τη μπουγάδα τους, με νερό που ερχόταν από την κρήνη. Πότε κατά την επιγραφή κατασκεύαστηκαν;",getResources().getString(R.string.challenge_simplirwsis),getResources().getString(R.string.area_plystres),5,
+                37.6393839058,25.0422025335));
+        challenges_list.add(new Challenge(R.drawable.ch_marmarenia_vrisi_fiali, "Σε τι χρησιμεύει η φιάλη μεταξύ των κρουνών;",getResources().getString(R.string.challenge_multiple_choice_text),getResources().getString(R.string.area_plateia_xwriou),5,
+                37.639230, 25.042064));
+        challenges_list.add(new Challenge(R.drawable.ch_pirgos_platanos, "Απέναντι από τη μαρμαρένια κρήνη είναι ο Πλάτανος της πλατείας. Κοιτώντας τον Πλάτανο αναζητήστε την επιγραφή με την ημερομηνία του \"ΕΥΚΑΛΥΠΤΟΥ\"",getResources().getString(R.string.challenge_simplirwsis),getResources().getString(R.string.area_plateia_xwriou),5,
+                37.639155, 25.042083));
+        challenges_list.add(new Challenge(R.drawable.ch_marmarenia_vrisi, "Αναγνωρίζετε τα στοιχεία μπαρόκ της πρώτης φάσης της μαρμαρένιας κρήνης;",getResources().getString(R.string.challenge_type_anazhthsh),getResources().getString(R.string.challenge_tap_on_photo),5,
+                37.639197, 25.042102));
+        challenges_list.add(new Challenge(R.drawable.ch_marmarenia_vrisi, "Ποιά από τα στοιχεία της πρώτης φάσης της μαρμαρένιας κρήνης, ο χαρακτήρας τους είναι φυσικός και ποιων υπερφυσικός;",getResources().getString(R.string.challenge_tap_on_photo),getResources().getString(R.string.area_plateia_xwriou),5,
+                37.639266, 25.042114));
+        challenges_list.add(new Challenge(R.drawable.ch_marmarenia_vrisi, "Πού βρίσκονται και ποια είναι τα νεοκλασικά στοιχεία που ανήκουν στη δεύτερη και την τρίτη κατασκευαστική φάση της μαρμαρένιας κρήνης;",getResources().getString(R.string.challenge_tap_on_photo),getResources().getString(R.string.area_plateia_xwriou),5,
+                37.639223, 25.042022));
+
+        //LATOMEIO
+        challenges_list.add(new Challenge(R.drawable.ch_spastira, "Ανεβαίνοντας το δρομάκι προς το Νταμάρι του Αγίου Λευτερίου, συναντάτε μια μηχανή. Πως (πιστεύετε ότι) ονομάζεται;",getResources().getString(R.string.challenge_simplirwsis),getResources().getString(R.string.area_plateia_xwriou),5,
+                37.638143, 25.039033));
+        challenges_list.add(new Challenge(R.drawable.ch_gefyraki_siderenio_latomeio, "Περνώντας το σιδερένιο γεφυράκι αποκαλύπτεται ένα… ",getResources().getString(R.string.challenge_simplirwsis),getResources().getString(R.string.area_plateia_xwriou),5,
+                37.637878, 25.038593));
+        challenges_list.add(new Challenge(R.drawable.ch_katastegi, "Κατεβαίνοντας το επίπεδο δίπλα στο θεατράκι  μπορείς να βρεις την παλαιότερη χαραγμένη σ’ αυτό χρονολογία πάνω από το λιθόκτιστο καμαράκι;",getResources().getString(R.string.challenge_multiple_choice_text),getResources().getString(R.string.area_plateia_xwriou),5,
+                37.637917, 25.038434));
+        challenges_list.add(new Challenge(R.drawable.ch_latomeio_mixanima, "Στον σκαμμένο βράχο (κούτελο) δίπλα στο καμαράκι, υπάρχει ένα όνομα που έχει χαραχθεί και είναι...;",getResources().getString(R.string.challenge_simplirwsis),getResources().getString(R.string.area_plystres),5,
+                37.638291, 25.038606));
+        challenges_list.add(new Challenge(R.drawable.ch_latomeio_mixanima, "Ο δρόμος εδώ είναι υπερυψωμένος, ανάμεσα από επίπεδα που έχουν κατεβεί από τη λατόμηση. Στην αρχή του, αριστερά, θα δεις λίθινα κτίσματα. Σε τί χρησίμευαν;",getResources().getString(R.string.challenge_multiple_choice_text),getResources().getString(R.string.area_plateia_xwriou),5,
+                37.637891, 25.038434));
+        challenges_list.add(new Challenge(R.drawable.ch_latomeio_mixanima, "Τι χρώμα μάρμαρο υπάρχει στο νταμάρι;",getResources().getString(R.string.challenge_simplirwsis),getResources().getString(R.string.area_plateia_xwriou),5,
+                37.638172, 25.038777));
+
+ /*       //MOXTHOS K DOXA
+        challenges_list.add(new Challenge(R.drawable.ch_marmarenia_vrisi, "Ανεβαίνοντας το δρομάκι προς το Νταμάρι του Αγίου Λευτερίου, συναντάτε μια μηχανή. Πως (πιστεύετε ότι) ονομάζεται;",getResources().getString(R.string.challenge_simplirwsis),getResources().getString(R.string.area_plateia_xwriou),5,
+                37.638143, 25.039033));
+        challenges_list.add(new Challenge(R.drawable.ch_marmarenia_vrisi_fiali, "Περνώντας το σιδερένιο γεφυράκι αποκαλύπτεται ένα… ",getResources().getString(R.string.challenge_simplirwsis),getResources().getString(R.string.area_plateia_xwriou),5,
+                37.637878, 25.038593));
+        challenges_list.add(new Challenge(R.drawable.ch_marmarenia_vrisi, "Κατεβαίνοντας το επίπεδο δίπλα στο θεατράκι  μπορείς να βρεις την παλαιότερη χαραγμένη σ’ αυτό χρονολογία πάνω από το λιθόκτιστο καμαράκι;",getResources().getString(R.string.challenge_multiple_choice_text),getResources().getString(R.string.area_plateia_xwriou),5,
+                37.637917, 25.038434));
+        challenges_list.add(new Challenge(R.drawable.ch_plistres, "Στον σκαμμένο βράχο (κούτελο) δίπλα στο καμαράκι, υπάρχει ένα όνομα που έχει χαραχθεί και είναι...;",getResources().getString(R.string.challenge_simplirwsis),getResources().getString(R.string.area_plystres),5,
+                37.638291, 25.038606));
+        challenges_list.add(new Challenge(R.drawable.ch_marmarenia_vrisi_fiali, "Ο δρόμος εδώ είναι υπερυψωμένος, ανάμεσα από επίπεδα που έχουν κατεβεί από τη λατόμηση. Στην αρχή του, αριστερά, θα δεις λίθινα κτίσματα. Σε τί χρησίμευαν;",getResources().getString(R.string.challenge_multiple_choice_text),getResources().getString(R.string.area_plateia_xwriou),5,
+                37.637891, 25.038434));
+        challenges_list.add(new Challenge(R.drawable.ch_pirgos_platanos, "Τι χρώμα μάρμαρο υπάρχει στο νταμάρι;",getResources().getString(R.string.challenge_simplirwsis),getResources().getString(R.string.area_plateia_xwriou),5,
+                37.638172, 25.038777));*/
+
+
+        cardViewPagerAdapter = new CardViewPagerAdapter(ctx, challenges_list);
         viewPager.setAdapter(cardViewPagerAdapter);
         viewPager.setPageMargin((int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP,
                 11, getResources().getDisplayMetrics()));
 //      viewPager.setPageTransformer(false, new AlphaTransformer()); //enable only if we want opacity to change on card view pager
         viewPager.setPageTransformer(false, new ScaleTransformer(ctx));
+        viewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+            @Override
+            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
 
+            }
+
+            @Override
+            public void onPageSelected(int position) {
+                map.getController().animateTo(new GeoPoint(challenges_list.get(position).getLatitude(),challenges_list.get(position).getLongitude()));
+
+            }
+
+            @Override
+            public void onPageScrollStateChanged(int state) {
+
+            }
+        });
         //make map
         map = view.findViewById(R.id.map_view);
         // Create a custom tile source
@@ -100,8 +167,8 @@ public class FragmentChartis extends Fragment {
                 new InternalCompassOrientationProvider(ctx),
                 map);
         mCompassOverlay.enableCompass();
+        mCompassOverlay.setCompassCenter(view.getX()+40f,view.getY()+50f);
         map.getOverlays().add(mCompassOverlay);
-
 
         //hide the bad-looking osm default zoom controls
         map.setBuiltInZoomControls(false);
@@ -117,31 +184,29 @@ public class FragmentChartis extends Fragment {
 
         //your items
         final ArrayList<OverlayItem> items = new ArrayList<OverlayItem>();
-        items.add(new OverlayItem("1","1",new GeoPoint(37.638143, 25.039033)));
-        items.add(new OverlayItem("2","2", new GeoPoint(37.637878, 25.038593)));
-        items.add(new OverlayItem("3","3", new GeoPoint(37.637917, 25.038434)));
-        items.add(new OverlayItem("4","4", new GeoPoint(37.637917, 25.038434)));
-        items.add(new OverlayItem("5","5",new GeoPoint(37.638329, 25.038494)));
+
+        int i=0;
+        while(i<challenges_list.size()){
+            items.add(new OverlayItem(String.valueOf(i),String.valueOf(i),new GeoPoint(challenges_list.get(i).getLatitude(),challenges_list.get(i).getLongitude())));
+            i++;
+        }
         final ItemizedIconOverlay myItemizedIconOverlay = new ItemizedIconOverlay(items, getResources().getDrawable(R.drawable.ic_map_mission_proximal), new ItemizedIconOverlay.OnItemGestureListener() {
             @Override
             public boolean onItemSingleTapUp(int index, Object item) {
 //                items.get(index).setMarker(getResources().getDrawable(R.drawable.arximastoras));
                 map.getController().animateTo(items.get(index).getPoint());
+                viewPager.setCurrentItem(index);
+
                 return false;
             }
 
             @Override
             public boolean onItemLongPress(int index, Object item) {
+
                 return false;
             }
         }, map.getContext());
         map.getOverlays().add(myItemizedIconOverlay);
-/*
-        Marker marker = new Marker(map);
-        marker.setPosition(new GeoPoint(37.638143, 25.039033));
-        marker.setAnchor(Marker.ANCHOR_CENTER, Marker.ANCHOR_BOTTOM);
-        marker.setIcon(getResources().getDrawable(R.drawable.ic_map_mission_proximal));
-        map.getOverlays().add(marker);*/
         map.invalidate();
 
 
@@ -150,7 +215,7 @@ public class FragmentChartis extends Fragment {
         ScaleBarOverlay mScaleBarOverlay = new ScaleBarOverlay(map);
         mScaleBarOverlay.setCentred(true);
         //play around with these values to get the location on screen in the right place for your application
-        mScaleBarOverlay.setScaleBarOffset(dm.widthPixels/2, 20);
+        mScaleBarOverlay.setScaleBarOffset(dm.widthPixels/2, 50);
         map.getOverlays().add(mScaleBarOverlay);
 
         //do stuff on zoom level changed

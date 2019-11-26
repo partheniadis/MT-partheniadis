@@ -5,155 +5,189 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:gravity="center"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:paddingTop="12dp">
 
         <LinearLayout
+            android:id="@+id/linearLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:paddingLeft="22dp"
-            android:paddingRight="22dp"
-            >
-
-<!--            <com.example.mt_v01.helperclasses.CustomTextView
-                android:id="@+id/textView2"
+            android:clipChildren="false"
+            android:clipToPadding="false"
+            android:paddingTop="8dp"
+            android:paddingRight="8dp"
+            android:paddingLeft="8dp"
+            android:paddingBottom="120dp">
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="sans-serif-black"
-                android:gravity="center"
-                android:text="@string/ergaleiothiki"
-                android:textAlignment="center"
-                android:textAppearance="@style/TextAppearance.AppCompat.Large"
-                android:textColor="@color/colorErgaliothiki"
-                />
+                android:orientation="horizontal"
+                android:layout_marginBottom="3dp"
+                android:layout_marginTop="12dp">
+
+                <com.example.mt_v01.helperclasses.CustomTextView
+                    android:id="@+id/textView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Κασελάκι" />
+                <com.example.mt_v01.helperclasses.CustomTextView
+                    android:id="@+id/textView4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="textEnd"
+                    android:layout_weight="1"
+                    android:text="1/1" />
+            </LinearLayout>
 
 
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="22dp"
-                 />-->
 
-            <ImageView
-                android:id="@+id/imageView2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                tools:srcCompat="@tools:sample/avatars[1]"
-                />
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="22dp"
-                />
-            <com.google.android.material.card.MaterialCardView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:minHeight="100dp"
-                style="@style/Widget.MaterialComponents.CardView"
-
-                >
-
-
-                        <TableLayout
+            <androidx.cardview.widget.CardView
+                            android:id="@+id/cardView01"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:stretchColumns="0,1,2"
-                            android:padding="22dp"
-
-                            >
-
-                            <TableRow
-                                android:layout_gravity="center"
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                >
-
-                                <com.example.mt_v01.helperclasses.CustomTextView
-                                    android:gravity="left"
-                                    android:text="Εργαλεία"/>
-
-                            </TableRow>
-
-                            <TableRow
-                                android:layout_gravity="center"
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:gravity="center"
-
-                                >
-
-                                <Button
-                                    android:id="@+id/button"
+                            app:cardCornerRadius="10dp"
+                            app:cardElevation="2dp"
+                            android:clipChildren="false"
+                            android:clipToPadding="false"
+                            app:cardMaxElevation="10dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent">
+                                <ImageView
+                                    android:id="@+id/imageView2"
                                     android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:text="Εργαλείο 1" />
+                                    android:layout_height="155dp"
+                                    android:layout_margin="8dp"
+                                    android:elevation="3dp"
+                                    android:outlineAmbientShadowColor="@color/transparent"
+                                    android:outlineProvider="none"
+                                    android:outlineSpotShadowColor="@color/transparent"
+                                    android:src="@drawable/tool_kaselaki" />
+                        </androidx.cardview.widget.CardView>
 
-                                <Button
-                                    android:id="@+id/button2"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:text="Εργαλείο 2" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="3dp"
+                android:layout_marginTop="12dp"
+                android:orientation="horizontal">
 
-                                <Button
-                                    android:id="@+id/button3"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:text="Εργαλείο 3" />
-                            </TableRow>
+                <com.example.mt_v01.helperclasses.CustomTextView
+                    android:id="@+id/textView21"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Εργαλεία" />
+                <com.example.mt_v01.helperclasses.CustomTextView
+                    android:id="@+id/textView22"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="textEnd"
+                    android:layout_weight="1"
+                    android:text="0/5" />
+            </LinearLayout>
 
-                            <TableRow
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent" >
+            <androidx.cardview.widget.CardView
+                            android:id="@+id/cardView5"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:clipChildren="false"
+                            android:clipToPadding="false"
+                            app:cardCornerRadius="10dp"
+                            app:cardElevation="2dp"
+                            app:cardMaxElevation="10dp"
+                            app:layout_constraintVertical_bias="0.07999998">
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
 
+                                        <ImageView
+                                            android:id="@+id/imageView15"
+                                            android:layout_width="176dp"
+                                            android:layout_height="84dp"
+                                            android:layout_marginStart="8dp"
+                                            android:layout_marginTop="8dp"
+                                            android:layout_marginBottom="8dp"
+                                            android:src="@drawable/tool_mantrakas"
+                                            app:layout_constraintBottom_toBottomOf="parent"
+                                            app:layout_constraintEnd_toEndOf="parent"
+                                            app:layout_constraintHorizontal_bias="0.0"
+                                            app:layout_constraintStart_toStartOf="parent"
+                                            app:layout_constraintTop_toTopOf="parent"
+                                            app:layout_constraintVertical_bias="0.016" />
 
-                                <Button
-                                    android:id="@+id/button5"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:text="Εργαλείο 4" />
+                                    <ImageView
+                                        android:id="@+id/imageView14"
+                                        android:layout_width="130dp"
+                                        android:layout_height="77dp"
+                                        android:layout_marginStart="8dp"
+                                        android:layout_marginTop="8dp"
+                                        android:layout_marginEnd="8dp"
+                                        android:layout_marginBottom="8dp"
+                                        android:backgroundTint="#007E7E7E"
+                                        android:src="@drawable/tool_veloni"
+                                        android:tint="#00646464"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintHorizontal_bias="0.2"
+                                        app:layout_constraintStart_toEndOf="@+id/imageView15"
+                                        app:layout_constraintTop_toTopOf="@+id/imageView15"
+                                        app:layout_constraintVertical_bias="0.0" />
 
-                                <Button
-                                    android:id="@+id/button6"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:text="Εργαλείο 5" />
+                                    <ImageView
+                                        android:id="@+id/imageView17"
+                                        android:layout_width="118dp"
+                                        android:layout_height="88dp"
+                                        android:layout_marginStart="8dp"
+                                        android:layout_marginTop="8dp"
+                                        android:layout_marginEnd="8dp"
+                                        android:layout_marginBottom="8dp"
+                                        android:backgroundTint="#007E7E7E"
+                                        android:src="@drawable/tool_thrapina"
+                                        android:tint="#00646464"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintHorizontal_bias="0.76"
+                                        app:layout_constraintStart_toEndOf="@+id/imageView16"
+                                        app:layout_constraintTop_toBottomOf="@+id/imageView14"
+                                        app:layout_constraintVertical_bias="0.021" />
 
-                                <Button
-                                    android:id="@+id/button7"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:text="Εργαλείο 6" />
-                            </TableRow>
+                                    <ImageView
+                                        android:id="@+id/imageView18"
+                                        android:layout_width="189dp"
+                                        android:layout_height="113dp"
+                                        android:layout_marginStart="8dp"
+                                        android:layout_marginTop="8dp"
+                                        android:layout_marginEnd="8dp"
+                                        android:layout_marginBottom="8dp"
+                                        android:backgroundTint="#007E7E7E"
+                                        android:src="@drawable/tool_koumpaso"
+                                        android:tint="#00646464"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintHorizontal_bias="0.344"
+                                        app:layout_constraintStart_toStartOf="@+id/imageView16"
+                                        app:layout_constraintTop_toBottomOf="@+id/imageView16"
+                                        app:layout_constraintVertical_bias="0.0" />
 
-                            <TableRow
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent" >
-
-
-                                <Button
-                                    android:id="@+id/button10"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:text="Εργαλείο 7" />
-
-                                <Button
-                                    android:id="@+id/button9"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:text="Εργαλείο 8" />
-
-                                <Button
-                                    android:id="@+id/button8"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:text="Εργαλείο 9" />
-                            </TableRow>
-
-
-                        </TableLayout>
-
-            </com.google.android.material.card.MaterialCardView>
-
+                                    <ImageView
+                                        android:id="@+id/imageView16"
+                                        android:layout_width="174dp"
+                                        android:layout_height="106dp"
+                                        android:layout_marginStart="8dp"
+                                        android:layout_marginTop="12dp"
+                                        android:layout_marginEnd="8dp"
+                                        android:backgroundTint="#007E7E7E"
+                                        android:src="@drawable/tool_arida"
+                                        android:tint="#00646464"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintHorizontal_bias="0.147"
+                                        app:layout_constraintStart_toStartOf="@+id/imageView15"
+                                        app:layout_constraintTop_toBottomOf="@+id/imageView15" />
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+                        </androidx.cardview.widget.CardView>
 
         </LinearLayout>
 

@@ -42,4 +42,27 @@
     <string name="decrease"><![CDATA[<]]></string>
     <string name="increase"><![CDATA[>]]></string>
     <string name="zero">0</string>
+    <string name="title_activity_settings">Settings</string>
+
+    <!-- Preference Titles -->
+    <string name="messages_header">Messages</string>
+    <string name="sync_header">Sync</string>
+
+    <!-- Messages Preferences -->
+    <string name="signature_title">Your signature</string>
+    <string name="reply_title">Default reply action</string>
+
+    <!-- Sync Preferences -->
+    <string name="sync_title">Sync email periodically</string>
+    <string name="attachment_title">Download incoming attachments</string>
+    <string name="attachment_summary_on">Automatically download attachments for incoming emails
+    </string>
+    <string name="attachment_summary_off">Only download attachments when manually requested</string>
+    <string name="mission_marmarenia_Vrysi">Η Μαρμαρένια Βρύση</string>
+    <string name="area_plateia_xwriou">ΠΛΑΤΕΙΑ ΤΟΥ ΧΩΡΙΟΥ</string>
+    <string name="challenge_type_anazhthsh">ΠΡΟΚΛΗΣΗ ΑΝΑΖΗΤΗΣΗΣ</string>
+    <string name="area_plystres">ΠΛΥΣΤΡΕΣ</string>
+    <string name="challenge_simplirwsis">ΑΡΙΘΜΙΤΙΚΗ ΣΥΜΠΛΗΡΩΣΗ</string>
+    <string name="challenge_multiple_choice_text">ΠΟΛΛΑΠΛΗ ΕΠΙΛΟΓΗΣ</string>
+    <string name="challenge_tap_on_photo">ΕΝΤΟΠΙΣΜΟΣ ΣΕ ΦΩΤΟΓΡΑΦΙΑ</string>
 </resources>

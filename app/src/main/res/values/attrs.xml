@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="CustomConstraintLayout">
+        <attr name="challengeTitle" format="string" />
+        <attr name="challengesCompletedText" format="string" />
+        <attr name="experienceCollectedText" format="string" />
+        <attr name="backgroundColorPolygon" format="integer" />
+    </declare-styleable>
+</resources>
